@@ -4,7 +4,7 @@ In TON, consensus parameters of node operation related to TVM, catchain, fees, a
 
 ## Elector
 
-The Elector smart contract controls the way how rounds of validation change each other, who gets the duty to validate the blockchain, and how rewards for validation would be distributed. If you want to become a validator and interact with Elector, check [validator instrucitons](https://ton.org/validator).
+The Elector smart contract controls the way how rounds of validation change each other, who gets the duty to validate the blockchain, and how rewards for validation would be distributed. If you want to become a validator and interact with Elector, check [validator instructions](https://ton.org/validator).
 
 Elector stores data of Toncoin that is not withdrawn in `credits` hashmap, new applications in `elect` hashmap, and information about previous elections in _past\_elections_ hashmap (the latter is stored inside _complaints_ about validator misbehavior and _frozen_-stakes of validator for already finished rounds, which are withheld for `stake_held_for`(ConfigParam 15)). The Elector contract has three purposes:
  - Process applications for the election of validators
